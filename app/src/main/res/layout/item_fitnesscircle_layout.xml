@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/ll_video_item"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:id="@+id/ll_user_content"
+            android:layout_marginRight="@dimen/all_zouyou"
+            android:layout_marginLeft="@dimen/all_zouyou"
+            android:layout_height="wrap_content">
+            <com.example.temperatureandhumiditytesting.view.CircleImageView
+                android:id="@+id/cv_head"
+                android:layout_width="39dp"
+                android:scaleType="centerCrop"
+                android:layout_height="39dp"
+                android:src="@mipmap/bg_zhanweitu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/cv_head"
+                android:id="@+id/tvTitle"
+                android:text="昵称"
+                android:layout_weight="1"
+                android:textColor="#333333"
+                android:textSize="15dp" />
+            <ImageView
+                android:id="@+id/ivHot"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/icon_hot"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/ll_content"
+        android:layout_marginLeft="@dimen/shier"
+        android:layout_marginRight="@dimen/shier"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tvContent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/all_zouyou"
+            android:layout_marginLeft="@dimen/all_zouyou"
+            android:layout_marginBottom="14dp"
+            android:text="我是描述，有多具体就有多具体"
+            android:textColor="#101010"
+            android:textSize="14dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_pic"
+            android:clickable="true"
+            android:layout_marginTop="12dp"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="8dp"
+                android:focusable="false"
+                android:layout_marginRight="@dimen/ba"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:numColumns="3" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="@dimen/all_zouyou"
+        android:layout_marginLeft="@dimen/all_zouyou"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/tv_release_time"
+            android:textColor="#999999"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/gray3"
+        android:layout_marginRight="@dimen/all_zouyou"
+        android:layout_marginLeft="@dimen/all_zouyou"
+        android:layout_marginTop="11dp"
+        android:layout_height="1dp">
+    </View>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dp10"
+    android:gravity="center_vertical"
+    android:layout_marginTop="@dimen/dp5"
+    android:paddingVertical="@dimen/dp10">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="季节"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/gray3"
+        android:textSize="@dimen/dp_12" />
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:id="@+id/llOne"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+    <com.example.temperatureandhumiditytesting.view.CircleImageView
+        android:id="@+id/ivHead"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp40"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_zhanweitu" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="@dimen/dp10"
+        android:text="毛线"
+        android:textColor="@color/_888888"
+        android:textSize="@dimen/dp_12" />
+</LinearLayout>
+        <LinearLayout
+            android:id="@+id/llTwo"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tvContent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="@dimen/dp10"
+                android:text="毛线"
+                android:textColor="@color/_888888"
+                android:textSize="@dimen/dp_12" />
+            <com.example.temperatureandhumiditytesting.view.CircleImageView
+                android:id="@+id/ivHead1"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/bg_zhanweitu" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

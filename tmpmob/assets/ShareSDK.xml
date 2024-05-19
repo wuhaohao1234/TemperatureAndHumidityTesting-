@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevInfor>
+<Wechat Id="1" SortId="1" AppId="wx925153264a7a987e" AppSecret="15c68e8f1deb341a93571bc635a06f17" />
+<QQ Id="3" SortId="3" AppId="101886622" AppKey="2f19f0e5a43dc375305846a5daea35f3" ShareByAppClient="true" />
+<WechatMoments Id="2" SortId="2" />
+<QZone Id="4" SortId="4" AppId="101886622" AppKey="2f19f0e5a43dc375305846a5daea35f3" ShareByAppClient="true" />
+<SinaWeibo Id="5" SortId="5" AppKey="1916014573" AppSecret="8cfa1d2b762aef1945457d73b702309f" ShareByAppClient="true" Enable="true" RedirectUrl="http://www.tabankeji.com" />
+</DevInfor>

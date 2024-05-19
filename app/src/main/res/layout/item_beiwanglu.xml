@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/dp_10"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/item_mainlv_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="烟酒"
+                android:drawableLeft="@mipmap/biaoti"
+                android:drawablePadding="@dimen/dp10"
+                android:gravity="center_vertical"
+                android:textColor="#101010"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/item_mainlv_tv_beizhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="华子"
+                android:drawableLeft="@mipmap/neirong"
+                android:drawablePadding="@dimen/dp10"
+                android:gravity="center_vertical"
+                android:textColor="#101010"
+
+                android:layout_marginTop="@dimen/dp10"
+                android:textSize="12sp"/>
+        </LinearLayout>
+<TextView
+    android:id="@+id/tvState"
+    android:layout_width="wrap_content"
+    android:textColor="@color/red"
+    android:layout_alignParentRight="true"
+    android:text="已完成"
+    android:layout_marginRight="@dimen/dp_10"
+    android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/llTIme"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_mainlv_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今天18：10"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/kaishitime"
+            android:drawablePadding="@dimen/dp10"
+            android:textColor="#101010"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/item_mainlv_tv_time_end"
+            android:layout_width="wrap_content"
+            android:drawableLeft="@mipmap/jieshutime"
+            android:drawablePadding="@dimen/dp10"
+            android:layout_height="wrap_content"
+            android:text="今天18：10"
+            android:gravity="center_vertical"
+            android:textColor="#101010"
+
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/light_grey"
+        android:layout_marginHorizontal="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_height="1px"/>
+</LinearLayout>

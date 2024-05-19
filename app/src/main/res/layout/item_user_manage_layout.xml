@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/dp10"
+    android:paddingVertical="@dimen/dp10">
+
+    <com.example.temperatureandhumiditytesting.view.CircleImageView
+        android:id="@+id/ivHead"
+        android:layout_width="@dimen/dp_110"
+        android:layout_height="@dimen/dp_110"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_zhanweitu"
+        app:onlyDrawBorder="false"
+        app:roundRadius="@dimen/dp_4"
+        app:shape="rectangle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="毛衣"
+            android:textColor="@color/_101010"
+            android:textSize="@dimen/dp_16"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="毛线"
+            android:textColor="@color/_888888"
+            android:textSize="@dimen/dp_12" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="季节"
+        android:textColor="@color/red"
+        android:textSize="@dimen/dp_12" />
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title_include"
+        layout="@layout/top_include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title_include"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="134dp"
+            android:src="@mipmap/logo"
+            android:layout_marginTop="100dp"
+            android:layout_height="134dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="学习助手APP"
+            android:textColor="@color/_101010"
+            android:textSize="@dimen/text_shiliu"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:text="--"
+            android:layout_marginTop="@dimen/shiyi"
+            android:textColor="@color/_101010"
+            android:textSize="@dimen/text_shiliu"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="33dp"
+        android:layout_width="wrap_content"
+        android:text="学习助手App开发者 版权所有"
+        android:layout_marginTop="@dimen/shiyi"
+        android:textColor="@color/_101010"
+        android:textSize="@dimen/text_shiliu"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

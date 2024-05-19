@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_weather_information"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+
+    app:cardElevation="1dp">
+
+<TextView
+    android:layout_width="match_parent"
+    android:text="哈尔滨"
+    android:gravity="center_horizontal"
+    android:id="@+id/tvCity"
+    android:textColor="@color/_101010"
+    android:textSize="@dimen/dp20"
+    android:layout_marginVertical="@dimen/dp5"
+    android:textStyle="bold"
+    android:layout_height="wrap_content"/>
+
+</LinearLayout>

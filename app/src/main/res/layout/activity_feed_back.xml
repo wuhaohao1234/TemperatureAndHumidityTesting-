@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_include"
+        layout="@layout/top_include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_delete_text"
+        android:layout_below="@+id/title_include"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/dp_21">
+            <EditText
+                android:id="@+id/etBiaoTi"
+                style="@style/text_14_101010_style"
+                android:layout_width="match_parent"
+                android:layout_height="167dp"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/gray_biankuang_4_shape"
+                android:gravity="top"
+                android:hint="写下您的问题，感谢您的宝贵意见~"
+                android:paddingHorizontal="@dimen/dp_15"
+                android:paddingVertical="@dimen/dp20"
+                android:textColorHint="#747474"
+                android:textSize="@dimen/dp_12" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="联系电话"
+                android:textColor="@color/_101010"
+                android:textSize="@dimen/dp_14"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/etPhone"
+                style="@style/text_14_101010_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/gray_biankuang_4_shape"
+                android:gravity="top"
+                android:hint="留下您的联系方式，我们会联系您"
+                android:paddingHorizontal="@dimen/dp_15"
+                android:inputType="phone"
+                android:paddingVertical="@dimen/dp10"
+                android:textColorHint="#747474"
+                android:textSize="@dimen/dp_12" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:overScrollMode="never" />
+
+
+
+
+            <Button
+                android:id="@+id/tvFaBu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_80"
+                android:layout_marginBottom="30dp"
+                android:background="@color/text4"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/dp_80"
+                android:paddingVertical="@dimen/dp5"
+                android:text="确认提交"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/shisi" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_delete_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/red"
+        android:drawableTop="@mipmap/picture_icon_delete"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/app_drag_delete"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</RelativeLayout>

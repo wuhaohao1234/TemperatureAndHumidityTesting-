@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.stx.xhb.xbanner.XBanner
+        android:id="@+id/guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:isAutoPlay="false"
+        app:pointNormal="@drawable/shape_normal_gay"
+        app:pointSelect="@drawable/shape_select_red"
+        app:pointTopBottomPadding="20dp" />
+    <TextView
+        android:id="@+id/scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn_line_hui"
+        android:gravity="center"
+        android:layout_marginTop="55dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:paddingVertical="4dp"
+        android:paddingHorizontal="10dp"
+        android:text="跳过"
+        android:textColor="#DEDEDE"
+        android:textSize="15sp" />
+</RelativeLayout>

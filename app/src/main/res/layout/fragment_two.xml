@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title_include"
+        layout="@layout/top_include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true" />
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_include"
+        app:srlEnableAutoLoadMore="false"
+        app:srlPrimaryColor="@color/white">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlAccentColor="@color/red"
+            app:srlPrimaryColor="@color/white" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@mipmap/icon_big_add"
+        app:backgroundTint="@color/text4"
+        app:elevation="6dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:rippleColor="@color/text4"
+        android:visibility="gone"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="@dimen/dp_30"
+        app:pressedTranslationZ="25dp"
+        app:fabSize="normal"/>
+
+</RelativeLayout>

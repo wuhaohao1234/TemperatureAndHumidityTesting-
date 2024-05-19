@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/rlContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bai_bg_yuan"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp20">
+
+            <TextView
+                android:id="@+id/tvQQ"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="分享到\nQQ"
+                android:textColor="@color/_101010"
+                android:textSize="@dimen/dp20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvKongJian"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="分享到\n空间"
+                android:textColor="@color/_101010"
+                android:textSize="@dimen/dp20"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvQuXiao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:layout_marginBottom="@dimen/dp20"
+            android:textColor="@color/_101010"
+            android:textSize="@dimen/dp20"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>

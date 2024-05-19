@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <com.example.temperatureandhumiditytesting.view.CircleImageView
+        android:id="@+id/img_inbetweening"
+        android:layout_width="@dimen/dp_70"
+        android:layout_marginLeft="@dimen/dp40"
+        android:layout_height="@dimen/dp_70"
+        android:layout_marginTop="@dimen/dp_60"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:text="您好，"
+         android:textSize="@dimen/dp_25"
+        android:textColor="@color/_101010"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:text="欢迎使用「温度湿度查询系统」"
+        android:textSize="@dimen/dp_15"
+        android:textColor="@color/_101010"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:text="输入账号密码，即可开始使用"
+        android:textSize="@dimen/dp_12"
+        android:textColor="#999999"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/login_input_layout"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_60"
+
+                android:gravity="center_vertical"
+                app:counterEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhone"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableLeft="@mipmap/xuehao"
+                    android:drawableStart="@mipmap/xuehao"
+                    android:drawablePadding="@dimen/dp10"
+                    android:hint="请输入手机号"
+                    android:inputType="number"
+                    android:paddingBottom="@dimen/dp20"
+                    android:textColorHint="@color/_888888" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_60"
+                android:gravity="center_vertical"
+                app:counterEnabled="false"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPsw"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入密码"
+                    android:drawableLeft="@mipmap/mima"
+                    android:inputType="textPassword"
+                    android:drawableStart="@mipmap/mima"
+                    android:drawablePadding="@dimen/dp10"
+
+                    android:paddingVertical="@dimen/dp20"
+                    android:textColorHint="@color/_888888" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/login_layout_progress"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="@dimen/dp_40"
+            layout="@layout/login_layout_progress"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginHorizontal="90dp"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@drawable/login_button_shape"
+        android:text="登录"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="90dp"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="您还没有账号？注册一个去吧"
+            android:textColor="@color/text4"
+            android:textSize="12dp" />
+    </LinearLayout>
+</LinearLayout>

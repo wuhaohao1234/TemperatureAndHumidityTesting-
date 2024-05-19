@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_include" />
+
+    <ImageView
+        android:id="@+id/ivBeiJing"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_300"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_zhanweitu" />
+    <Button
+        android:id="@+id/btChange"
+        android:text="更换背景图"
+        android:textColor="@color/white"
+        android:layout_width="@dimen/dp_150"
+        android:background="@color/text4"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_height="@dimen/dp_45"/>
+</LinearLayout>

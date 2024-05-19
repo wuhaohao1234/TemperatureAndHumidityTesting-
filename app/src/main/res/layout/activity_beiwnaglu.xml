@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <include
+        android:id="@+id/title_include"
+        layout="@layout/top_include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true" />
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_below="@+id/title_include"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadMore="false"
+        app:srlPrimaryColor="@color/white">
+
+    <com.scwang.smart.refresh.header.ClassicsHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srlAccentColor="@color/teal_200"
+        app:srlPrimaryColor="@color/white" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_below="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:divider="@null"
+        android:dividerHeight="5dp"/>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    <ImageView
+        android:id="@+id/iv_send"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:background="@color/text4"
+        android:padding="@dimen/dp10"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_big_add" />
+</RelativeLayout>

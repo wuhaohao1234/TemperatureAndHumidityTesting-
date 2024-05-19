@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/sanshi"
+        android:text="版权声明"
+        android:textStyle="bold"
+        android:id="@+id/tv_title"
+        android:textColor="@color/_101010"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tv_tishi_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:lineSpacingExtra="@dimen/dp_4"
+        android:text="部分素材源于网络\n版权归原作者所有\n如侵犯你的合法权益，请联系删除"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/test_color"
+        android:textSize="@dimen/dp_14" />
+
+
+
+
+        <TextView
+            android:id="@+id/tv_queren"
+            android:layout_width="@dimen/dp_90"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/dp_30"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="我知道了"
+            android:background="@drawable/blue_button_shape"
+            android:textSize="15dp" />
+
+
+</LinearLayout>

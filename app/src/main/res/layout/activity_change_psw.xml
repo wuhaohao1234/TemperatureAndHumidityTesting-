@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <include layout="@layout/top_include" />
+
+    <EditText
+        android:id="@+id/etOldPsw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="@dimen/dp_90"
+        android:background="@drawable/gray_biankuang_4_shape"
+        android:hint="请输入原始密码"
+        android:inputType="textPassword"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:textColorHint="@color/_888888" />
+
+    <EditText
+        android:id="@+id/etPsw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/gray_biankuang_4_shape"
+        android:hint="请输入新密码密码"
+        android:inputType="textPassword"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:textColorHint="@color/_888888" />
+    <EditText
+        android:id="@+id/etPswOnce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/gray_biankuang_4_shape"
+        android:hint="请再次输入新密码"
+        android:inputType="textPassword"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:textColorHint="@color/_888888" />
+    <Button
+        android:id="@+id/btChange"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:text="修改"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginHorizontal="90dp"
+        android:background="@color/text4" />
+</LinearLayout>

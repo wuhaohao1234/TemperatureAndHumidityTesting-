@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="loading_progress_small" parent="@android:style/Widget.ProgressBar.Large">
+        <item name="android:indeterminateDrawable">@drawable/base_progress_round_small</item>
+        <item name="android:minWidth">39dp</item>
+        <item name="android:maxWidth">39dp</item>
+        <item name="android:minHeight">39dp</item>
+        <item name="android:maxHeight">39dp</item>
+    </style>
+    <style name="HorizontalDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/light_grey</item>
+    </style>
+    <style name="DefaultClickable">
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/selector_default_press</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!--底部弹出Dialog动画-->
+    <style name="BottomAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/anim_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_bottom_out</item>
+    </style>
+    <style name="custom_dialog2" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否漂现在activity上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 去除黑色边框的关键设置项 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 屏幕背景是否变暗 -->
+        <item name="android:backgroundDimAmount">0.3</item>
+    </style>
+    <declare-styleable name="pickerview"><attr name="pickerview_gravity">
+        <enum name="center" value="17"/>
+        <enum name="left" value="3"/>
+        <enum name="right" value="5"/>
+    </attr><attr format="dimension" name="pickerview_textSize"/><attr format="color" name="pickerview_textColorOut"/><attr format="color" name="pickerview_textColorCenter"/><attr format="color" name="pickerview_dividerColor"/><attr format="float" name="pickerview_lineSpacingMultiplier"/></declare-styleable>
+    <dimen name="pickerview_textsize">20sp</dimen>
+    <dimen name="pickerview_topbar_btn_textsize">17sp</dimen>
+    <dimen name="pickerview_topbar_height">44dp</dimen>
+    <dimen name="pickerview_topbar_padding">20dp</dimen>
+    <dimen name="pickerview_topbar_title_textsize">18sp</dimen>
+    <integer name="animation_default_duration">300</integer>
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_seconds">秒</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <style mce_bogus="1" name="pickerview_dialogAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pickerview_dialog_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/pickerview_dialog_scale_out</item>
+    </style>
+    <style name="WelcomeTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@mipmap/sp</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="tab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:text">请选择</item>
+        <item name="android:textColor">@color/selector_text_color_tab</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="bottom_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation_Bottom_Dialog</item>
+    </style>
+    <style name="Animation_Bottom_Dialog">
+        <item name="android:windowEnterAnimation">@anim/bottom_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/bottom_dialog_exit</item>
+    </style>
+    <style name="text_14_101010_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/_101010</item>
+        <item name="android:textSize">@dimen/dp_14</item>
+    </style>
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!--自定义弹框   自定义 dialog -->
+    <style name="MyDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="shop_title_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/title_one</item>
+        <item name="android:textSize">19dp</item>
+    </style>
+
+</resources>

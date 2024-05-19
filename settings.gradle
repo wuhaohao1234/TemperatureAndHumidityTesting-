@@ -1,0 +1,5 @@
+rootProject.name = "实时温度湿度测试系统"
+include ':app'
+include ':widget'
+include ':jiaozivideoplayer'
+include ':library'

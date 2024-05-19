@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/dp10"
+    android:paddingHorizontal="@dimen/dp_15"
+   >
+    <TextView
+        style="@style/text_14_101010_style"
+        android:textSize="@dimen/dp_16"
+        android:textStyle="bold"
+        android:text="111111"
+        android:id="@+id/tvOrderNum"
+        />
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:orientation="horizontal"
+      android:layout_marginTop="@dimen/dp10"
+      android:layout_height="wrap_content">
+      <com.example.temperatureandhumiditytesting.view.CustomShapeImageView
+          android:id="@+id/ivHead"
+          android:layout_width="@dimen/dp_110"
+          android:layout_height="@dimen/dp_110"
+          android:scaleType="centerCrop"
+          android:src="@mipmap/bg_zhanweitu"
+          app:onlyDrawBorder="false"
+          app:roundRadius="@dimen/dp_4"
+          app:shape="rectangle" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_marginLeft="@dimen/dp10"
+          android:layout_weight="1"
+          android:orientation="vertical">
+
+          <TextView
+              android:id="@+id/tvTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:ellipsize="end"
+              android:maxLines="2"
+              android:text="毛衣"
+              android:textColor="@color/_101010"
+              android:textSize="@dimen/dp_16"
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/tvBaoYou"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/dp5"
+              android:text="毛线"
+              android:textColor="@color/_101010"
+              android:textSize="@dimen/dp_14" />
+
+          <TextView
+              android:id="@+id/tvLocation"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/dp10"
+              android:ellipsize="end"
+              android:maxLines="1"
+              android:text="毛线"
+              android:textColor="@color/_888888"
+              android:textSize="@dimen/dp_12" />
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/tvPrice"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/dp_15"
+          android:text="季节"
+          android:textColor="@color/red"
+          android:textSize="@dimen/dp_12" />
+  </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="@dimen/dp10"
+            style="@style/text_14_101010_style"
+            android:textColor="@color/_888888"
+            android:id="@+id/tvTime"
+            android:text="111111"
+            />
+        <Button
+            android:id="@+id/btCall"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/blue_button_shape"
+            android:textColor="@color/white"
+            android:text="打电话"
+            android:layout_height="@dimen/dp_30"/>
+    </RelativeLayout>
+<View
+    android:layout_width="match_parent"
+    android:background="@color/gray3"
+    android:layout_marginVertical="@dimen/dp_15"
+    android:layout_height="1px"/>
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/main_bg"
+    android:windowTranslucentNavigation="false">
+
+    <com.example.temperatureandhumiditytesting.view.NoScrollViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/rg_menutab"
+        android:layout_width="match_parent"
+        android:paddingVertical="@dimen/dp5"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/my_menu5_selector"
+            android:text="首页"
+            android:button="@null"
+            android:checked="true"
+            android:background="@color/transparent"
+            android:gravity="center_horizontal"
+            android:textColor="@drawable/main_rb_back_text"
+            android:textSize="@dimen/shiyi" />
+
+        <RadioButton
+            android:id="@+id/rb_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/my_menu1_selector"
+            android:text="我的"
+            android:textColor="@drawable/main_rb_back_text"
+            android:textSize="@dimen/shiyi" />
+    </RadioGroup>
+</LinearLayout>

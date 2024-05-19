@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dp10"
+    android:layout_marginTop="@dimen/dp5"
+    android:paddingVertical="@dimen/dp10">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <com.example.temperatureandhumiditytesting.view.CircleImageView
+        android:id="@+id/ivHead"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp40"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_zhanweitu"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="毛衣"
+            android:textColor="@color/_101010"
+            android:textSize="@dimen/dp_14"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="毛线"
+            android:textColor="@color/_888888"
+            android:textSize="@dimen/dp_12" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="季节"
+        android:textColor="@color/red"
+        android:textSize="@dimen/dp_12" />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_quxiao"
+            android:layout_width="@dimen/dp_90"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/dp_30"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="拒绝"
+            android:background="@drawable/gray_button_shape"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_queren"
+            android:layout_width="@dimen/dp_90"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/dp_30"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="同意"
+            android:background="@drawable/blue_button_shape"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+</LinearLayout>

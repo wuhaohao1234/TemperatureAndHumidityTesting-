@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_270"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius_dialog_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_270"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="20dp"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/ivTop"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/dialog_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="停止收款后"
+                android:gravity="center"
+                android:textColor="#101010"
+                android:textSize="@dimen/dp_16"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginHorizontal="@dimen/dp20"
+            android:layout_marginBottom="1dp">
+
+            <Button
+                android:id="@+id/btn_dialog_cancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:background="@drawable/gray_button_shape"
+                android:gravity="center"
+                android:text="取消"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_14" />
+
+
+
+            <Button
+                android:id="@+id/btn_dialog_ok"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:background="@drawable/blue_button_shape"
+                android:gravity="center"
+                android:text="确认"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_14" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

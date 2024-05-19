@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_include"
+        layout="@layout/top_include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llBottom"
+        android:layout_below="@+id/title_include">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp_15"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/dp5"
+                android:maxLines="2"
+                android:text="我是标题啊啊啊啊啊"
+                android:textColor="@color/_101010"
+                android:textSize="@dimen/dp_16"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp20">
+
+                <TextView
+                    android:id="@+id/tvBaoYou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:text="我是包邮啊"
+                    android:textColor="@color/_888888"
+                    android:textSize="@dimen/dp_15" />
+
+
+            </RelativeLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginHorizontal="@dimen/dp20"
+                android:layout_marginVertical="@dimen/dp20"
+                android:background="@color/gray3" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ISBN码"
+                    android:textColor="@color/_101010"
+                    android:textSize="@dimen/dp_15" />
+
+                <TextView
+                    android:id="@+id/tvIsbn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="ISBN码"
+                    android:textColor="@color/_888888"
+                    android:textSize="@dimen/dp_15" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp_15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="书籍分类"
+                    android:textColor="@color/_101010"
+                    android:textSize="@dimen/dp_15" />
+
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="ISBN码"
+                    android:textColor="@color/_888888"
+                    android:textSize="@dimen/dp_15" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp_15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="书籍成色"
+                    android:textColor="@color/_101010"
+                    android:textSize="@dimen/dp_15" />
+
+                <TextView
+                    android:id="@+id/tvChengSe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="ISBN码"
+                    android:textColor="@color/_888888"
+                    android:textSize="@dimen/dp_15" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/dp20"
+              >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自提地址"
+                    android:textColor="@color/_101010"
+                    android:textSize="@dimen/dp_15" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="ISBN码"
+                    android:textColor="@color/_888888"
+                    android:textSize="@dimen/dp_15" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlGetLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/dp20"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收货地址"
+                    android:textColor="@color/_101010"
+                    android:textSize="@dimen/dp_15" />
+
+                <TextView
+                    android:drawablePadding="@dimen/dp5"
+                    android:id="@+id/tvGetLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:hint="请选择收货地址"
+                    android:drawableRight="@mipmap/icon_jiantou_small"
+                    android:textColorHint="@color/gray3"
+                    android:textColor="@color/_888888"
+                    android:textSize="@dimen/dp_15" />
+                <EditText
+                    android:id="@+id/etGetLocation"
+                    style="@style/text_14_101010_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_below="@+id/tvGetLocation"
+                    android:background="@drawable/gray_biankuang_4_shape"
+                    android:gravity="top"
+                    android:hint="请输入具体详细地址..."
+                    android:paddingHorizontal="@dimen/dp_15"
+                    android:paddingVertical="@dimen/dp20"
+                    android:textColorHint="@color/gray3"
+                    android:textSize="@dimen/dp_12" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingVertical="@dimen/dp10">
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="我是价钱啊"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:textColor="@color/red"
+            android:textSize="@dimen/dp_25" />
+        <Button
+            android:id="@+id/btBuy"
+            android:layout_marginRight="@dimen/dp20"
+            android:textColor="@color/white"
+            android:text="立即购买"
+            android:paddingHorizontal="@dimen/dp40"
+            android:textSize="@dimen/dp_16"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_button_shape" />
+    </LinearLayout>
+</RelativeLayout>

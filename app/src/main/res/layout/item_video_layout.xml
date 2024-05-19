@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp10"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp">
+
+        <com.example.temperatureandhumiditytesting.view.CustomShapeImageView
+            android:id="@+id/iv_fengmian"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginLeft="@dimen/shier"
+            android:layout_marginTop="@dimen/shier"
+            android:layout_marginRight="@dimen/shier"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/bg_zhanweitu"
+            app:leftBottomRadius="@dimen/wu"
+            app:leftTopRadius="5dp"
+            app:onlyDrawBorder="false"
+            app:rightBottomRadius="@dimen/wu"
+            app:rightTopRadius="5dp"
+            app:shape="rectangle" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/bofang" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我是标题"
+            android:textColor="@color/_101010"
+            android:textSize="@dimen/shiwu"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/wu"
+            android:text="我是内容"
+            android:textColor="@color/_101010"
+            android:textSize="@dimen/dp_13" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/wu"
+            android:gravity="right"
+            android:text="我是内容"
+            android:textColor="@color/gray3"
+            android:textSize="@dimen/shiyi" />
+    </LinearLayout>
+</LinearLayout>

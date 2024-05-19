@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="content">
+       <item>fonts/hanyixingzhitifan.ttf</item>
+       <item>fonts/miaoziwenanti-regular.ttf</item>
+       <item>fonts/shangshouxingjianti.ttf</item>
+       <item>fonts/sihufeinibuke.ttf</item>
+       <item>fonts/xiangheyueliangsiben.ttf</item>
+       <item>fonts/zaozigongfanghaoyingti.ttf</item>
+       <item>fonts/zaozigongfangrunsongti.ttf</item>
+       <item>fonts/zaozigongfangshangzhenti.ttf</item>
+       <item>fonts/zaozigongfangxingqiuti.ttf</item>
+    </string-array>
+    <string-array name="contentxianshi">
+       <item>每一个努力学习的你，都是一颗闪耀的星星，照亮自己的道路，也照亮别人的梦想。所以，请继续发光，让学习成为你生命中最美丽的光芒。</item>
+       <item>知识是人生的灯塔，只有不断学习，才能照亮前行的道路。愿你勇往直前，攫取智慧的宝藏，书写未来的辉煌。</item>
+       <item>学习是给自己积累财富，知识是未来的宝藏。坚持不懈的学习，必将收获满载而归。</item>
+       <item>学习如逆水行舟，不进则退。只有奋力向前，才能到达成功的彼岸。</item>
+       <item>学习是无尽之旅，它没有终点，只有过程。每一步都是成长，每一次都是突破。所以，把握每一个机会，勇往直前，让学习点亮你的人生。</item>
+       <item>学如逆水行舟，不进则退。只有不断努力，才能逐梦前行，铸就辉煌的明天。</item>
+       <item>知识是力量，学习是源泉，勇往直前，无畏无惧。</item>
+       <item>学习是一种力量，它能够打开你的视野，提升你的能力，让你更接近梦想。不要停止学习的步伐，让知识带你飞翔。</item>
+       <item>每一次努力都是知识的灌溉，每一滴汗水都是成长的助力。愿你在学习的道路上越走越远，迎接智慧的丰收。</item>
+       <item>学习的道路上，没有捷径。只有坚持不懈的努力和持之以恒的决心。但请记住，每一步都值得，因为学习是通往更美好未来的道路。</item>
+       <item>知识的力量不可小觑，它能开拓人的视野，锻炼人的思维。愿你全力以赴，以学习为动力，书写美好人生的华丽篇章。</item>
+       <item>学习是通向智慧的桥梁，愿你勇往直前，步步高升。</item>
+       <item>安居不用架高堂，书中自有黄金屋。</item>
+       <item>娶妻莫恨无良媒，书中自有颜如玉。</item>
+       <item>古人学问无遗力，少壮工夫老始成。</item>
+       <item>男儿若遂平生志，六经勤向窗前读。</item>
+       <item>登高望远不可无，不可一日不读书。</item>
+
+    </string-array>
+
+</resources>

@@ -1,0 +1,217 @@
+apply plugin: 'com.android.application'  //Android Gradle插件的主要部分，用于构建Android应用程序，每隔程序都需要
+apply plugin: 'com.mob.sdk'  //MobPush 智能推送插件
+android {
+    //为了解决部分第三方库重复打包了META-INF的问题
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+    }
+    dexOptions {
+        javaMaxHeapSize "8g"  //Java虚拟机（JVM）中堆内存的最大大小
+        dexInProcess true  //加快编译速度
+        preDexLibraries true //预编译
+        incremental true  //使用增量模式构建
+    }
+    signingConfigs {         //java密钥库
+        release {
+            keyAlias '123456'
+            keyPassword '123456'
+            storeFile file('../temperatureandhumiditytesting.jks')
+            storePassword '123456'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 31
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        applicationId "com.example.temperatureandhumiditytesting"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi-v7a","arm64-v8a","x86","x86_64"
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            //Zipalign优化
+            zipAlignEnabled true
+            aaptOptions.cruncherEnabled = false
+            aaptOptions.useNewCruncher = false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 自定义输出配置
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "temperatureandhumiditytesting_v${defaultConfig.versionName}.apk"
+                }
+            }
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            aaptOptions.cruncherEnabled = false
+            aaptOptions.useNewCruncher = false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        pickFirst '**/libc++_shared.so'   //匹配到多个相同文件，只提取第一个
+        doNotStrip "*/armeabi/libYTCommon.so"   //设置某些动态库不被优化压缩。
+        doNotStrip "*/armeabi-v7a/libYTCommon.so"
+        doNotStrip "*/x86/libYTCommon.so"
+        doNotStrip "*/arm64-v8a/libYTCommon.so"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    ndkVersion '22.1.7171670'
+    buildToolsVersion '28.0.3'
+
+}
+MobSDK {
+    appKey "377d8bc474548"
+    appSecret "350117c8923e5b96397047d488ea2a0d"
+    spEdition "fp" // 设定MobSDK为隐私协议适配版本
+//    MobLink {
+//        uriScheme "ssdk2faa03ff5774c://cn.sharesdk.loop"
+//        appLinkHost "bad1.t4m.cn"
+//    }
+    ShareSDK {
+        loopShare true//闭环分享
+        //平台配置信息
+        devInfo {
+            Wechat {
+                id 1
+                sortId 1
+                appId "wx925153264a7a987e"
+                appSecret "15c68e8f1deb341a93571bc635a06f17"
+            }
+            QQ {
+                id 3
+                sortId 3
+                appId "101886622"
+                appKey "2f19f0e5a43dc375305846a5daea35f3"
+                shareByAppClient true
+                BypassApproval = "false"
+                Enable = "true"
+            }
+            WechatMoments {
+                id 2
+                sortId 2
+                AppId = "wx925153264a7a987e"
+                AppSecret = "15c68e8f1deb341a93571bc635a06f17"
+                BypassApproval = "false"
+                Enable = "true"
+            }
+            QZone {
+                id 4
+                sortId 4
+                appId "101886622"
+                appKey "2f19f0e5a43dc375305846a5daea35f3"
+                shareByAppClient true
+                BypassApproval = "false"
+                Enable = "true"
+            }
+
+            SinaWeibo {/////o
+                id 5
+                sortId 5
+                appKey "1916014573"
+                appSecret "8cfa1d2b762aef1945457d73b702309f"
+                callbackUri "http://www.tabankeji.com"
+                shareByAppClient true
+                enable true
+            }
+        }
+    }
+
+    permissions {
+        exclude "android.permission.GET_ACCOUNTS", "android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.ACCESS_COARSE_LOCATION"
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'io.github.bmob:android-sdk:3.8.21'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.8.1'
+    implementation 'com.squareup.okio:okio:2.2.2'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation project(path:':widget')
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.49'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation  'com.scwang.smart:refresh-layout-kernel:2.0.3'      //核心必须依赖
+    implementation  'com.scwang.smart:refresh-header-classics:2.0.3'    //经典刷新头
+    implementation  'com.scwang.smart:refresh-footer-classics:2.0.3'    //经典加载
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    implementation 'com.alibaba:fastjson:1.1.60.android'
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'io.github.lucksiege:pictureselector:v3.10.7'
+//     图片压缩 (按需引入)
+    implementation 'io.github.lucksiege:compress:v3.10.7'
+//     图片裁剪 (按需引入)
+    implementation 'io.github.lucksiege:ucrop:v3.10.7'
+    implementation project(':jiaozivideoplayer')
+//     自定义相机 (按需引入)
+    implementation 'io.github.lucksiege:camerax:v3.10.7'
+    implementation 'com.guolindev.permissionx:permissionx:1.6.1'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.github.xiaohaibin:XBanner:1.7.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    implementation 'com.contrarywind:Android-PickerView:3.2.7'
+    //七牛云图片存储
+    // 1 直接导入
+    implementation 'com.qiniu:qiniu-android-sdk:8.4.+'
+// 2 如果要修改okhttp依赖的版本，可采用以下方式（强烈建议使用七牛库依赖的okhttp版本）
+    implementation ('com.qiniu:qiniu-android-sdk:8.4.+'){
+        exclude (group: 'com.squareup.okhttp3', module: 'okhttp')
+    }
+    implementation project(':library')
+    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+    implementation 'com.qiniu:happy-dns:0.2.13'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    //新版扫码
+    implementation 'com.github.ailiwean:NBZxing-Scale:0.0.6'
+    implementation 'com.github.ailiwean:NBZxing:0.2.3'
+    implementation 'com.zhihu.android:matisse:0.5.3-beta3'
+    //轮播图
+    implementation 'com.github.zhpanvip:bannerviewpager:3.5.5'
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    //视频播放
+    implementation 'com.github.shixiuwen:colorpicker:v1.0.5'
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.mxn.soul:flowingdrawer-core:2.1.0'
+
+    implementation 'com.github.XunMengWinter:CircularAnim:0.4.1'
+    implementation 'me.drakeet.multitype:multitype:3.4.4'
+    //MaterialDialog
+    implementation 'me.drakeet.materialdialog:library:1.3.1'
+    //Layout选中效果
+    //进程保活
+    implementation 'com.carmelo:keeplive:1.0.0'
+    //自定义Button
+    implementation 'com.lai:buttonStyle:1.0.2'
+    //FloatActionButton进度条
+    implementation 'com.github.jorgecastilloprz:fabprogresscircle:1.01@aar'
+
+}

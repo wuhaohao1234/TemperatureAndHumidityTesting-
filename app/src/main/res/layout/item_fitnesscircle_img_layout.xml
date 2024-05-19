@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_marginTop="@dimen/dp5"
+    android:orientation="vertical">
+
+    <com.example.temperatureandhumiditytesting.view.CustomShapeImageView
+        android:id="@+id/ivHead"
+        android:layout_width="@dimen/dp_104"
+        android:layout_height="87dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_zhanweitu"
+        app:onlyDrawBorder="false"
+        app:roundRadius="@dimen/dp_4"
+        app:shape="rectangle" />
+</LinearLayout>
